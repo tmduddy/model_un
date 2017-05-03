@@ -13,7 +13,9 @@ def add_to_speakers_list(name):
     speakers_list.append(name)
 
     for i in range(len(speakers_list)):
+
         speaker = tkinter.Label(window, text=str(speakers_list[i]))
+        speaker.pack_forget()
         speaker.pack()
 
 
@@ -36,8 +38,8 @@ speak_submit = tkinter.Button(window, text="Add Speaker", command=lambda: add_to
 
 
 speak_label.pack()
-speak_enter.pack(side=tkinter.LEFT)
-speak_submit.pack(side=tkinter.LEFT)
+speak_enter.pack()
+speak_submit.pack()
 
 #--- Draw Window ---#
 window.mainloop()
